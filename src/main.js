@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 引入api文件
+import api from './api/index'
+// 将api绑定到全局
+Vue.prototype.$api = api
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

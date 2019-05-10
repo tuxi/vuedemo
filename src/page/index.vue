@@ -4,10 +4,12 @@
 
 <script>
 export default {
-  name: 'index'
+  name: 'index',
+  created () {
+    this.$api.get('articleBaseInfos', null, r => {
+      // console.log(r)
+      window.alert(r)
+    })
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
