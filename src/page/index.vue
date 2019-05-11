@@ -1,10 +1,11 @@
+<!--文件列表页-->
 <template>
   <div>
     <Header></Header>
     <div class="article_list">
       <ul>
         <li v-for="i in list" :key="i.id">
-          <time v-text="i.add_time"></time>
+          <time v-text="$utils.goodTime(i.add_time)"></time>
           <router-link :to="'/content/' + i.id">
             {{ i.title }}
           </router-link>
